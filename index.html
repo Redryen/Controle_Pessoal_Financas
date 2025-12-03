@@ -1,43 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle Pessoal de Finanças</title>
+    <title>Controle de Despesas</title>
 </head>
 <body>
-    
-    <h1>Controle Pessoal de Finanças</h1>
 
-    <form id="formsalario">
-        <label for="salario">Salário:</label>
-        <input type="number" id="salario" required> 
+    <h1>Controle de Despesas</h1>
 
-        <button type="submit">Salvar</button> <br> <br>
-    </form>
-
-    <h2>Despesas:</h2>
     <form id="formdespesa">
-        <label for="data">Data:</label>
-        <input type="date" id="data" required> <br> <br>
+        <label>Salário:</label>
+        <input type="number" id="salario"  required><br><br>
 
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" required> <br> <br>
+        <label>Data:</label>
+        <input type="date" id="data" required><br><br>
 
-        <label for="valor">Valor:</label>
-        <input type="number" id="valor" required> <br> <br>
+        <label>Nome da Despesa:</label>
+        <input type="text" id="nome" required><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <label>Valor:</label>
+        <input type="number" id="valor"  required><br><br>
+
+        <button type="submit">Adicionar Despesa</button>
     </form>
 
-    <h2>Salário:</h2>
-    <br> <br>
+    <h2>Lista de Despesas</h2>
+    <ul id="output"></ul>
 
-    <h2>Listagem Financeira:</h2>
-    <ul id="output"> </ul>
-    <script type="text/javascript" src="js/script.js"></script> 
-    
     <h2>Resumo Financeiro:</h2>
+    <ul id="resumo"></ul>
+
+    <script type="text/javaScript"  src="script.js"></script>
 
 
 </body>
