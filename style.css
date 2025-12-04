@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+input, button {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    color: #567ccf;
+}
+
+
+li {
+    background: #567ccf;
+    color: white;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 6px;
+    border-left: none !important;
+    box-shadow: none !important;
+}
+
+#resumoBox {
+    margin-top: 20px;
+    padding: 12px;
+    background: #dbeafe;
+    border: 2px solid #567ccf;
+    border-radius: 6px;
+}
