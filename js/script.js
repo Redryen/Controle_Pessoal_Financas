@@ -86,5 +86,15 @@ function exibir_resumo(){
 }
 
 
+    function limpar(){
+        var r = document.getElementById("resumo")
+        var d = document.getElementById("despesa")
+        r.remove()
+        d.remove()
+
+
+    }
+
+
 
 
