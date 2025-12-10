@@ -90,12 +90,22 @@ function exibir_resumo(){
         }
 
         else{
-            let li = document.createElement('li')
-            li.style.color="#3cd349ff"
-            li.textContent = 'Salário total: R$ ' + totalS + '  Total despesas: R$ ' + totalD + ' | Saldo: R$ ' + saldo
+             let li = document.createElement('li')
+            li.style.color="#0dc91cfd"
+            li.textContent ='Saldo: R$ ' + saldo 
 
-            resumo.appendChild(li)  
+            resumo.appendChild(li)   
         }
+
+        let lisalario = document.createElement('li')
+        lisalario.textContent = 'Salário total: R$ ' + totalS 
+
+        resumo.appendChild(lisalario)  
+
+        let lidespesa = document.createElement('li')
+        lidespesa.textContent =  'Total despesas: R$ ' + totalD
+
+        resumo.appendChild(lidespesa)       
     
 }
 
