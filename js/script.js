@@ -18,6 +18,7 @@ document.getElementById("formcadastro").addEventListener("submit", function(even
     exibir_resumo()
 })
 
+
 document.getElementById("formsalario").addEventListener("submit", function(event){
 
     event.preventDefault()
@@ -36,6 +37,8 @@ document.getElementById("formsalario").addEventListener("submit", function(event
 })
 
 
+
+
 function exibir_despesa(){
     var lista_despesa = JSON.parse(localStorage.getItem('listagem')) || []
     var despesa = document.getElementById('despesa')
@@ -48,13 +51,12 @@ function exibir_despesa(){
 
         let li = document.createElement('li')
         li.textContent =
-        'Data: ' + item.data  +
-        ' | Nome: ' + item.nome  +
-        ' | Valor: R$ ' + valor
+        'Data: ' + item.data  + ' | Nome: ' + item.nome  + ' | Valor: R$ ' + valor
 
         despesa.appendChild(li)
     }
 }
+
 
 
 
@@ -78,21 +80,35 @@ function exibir_resumo(){
 
     var resumo = document.getElementById('resumo')
     resumo.innerHTML = ''
+    
+        if(saldo < 0){
+            let li = document.createElement('li')
+            li.style.color="#9c0c0cfd"
+            li.textContent ='Saldo: R$ ' + saldo 
 
-    let li = document.createElement('li')
-    li.textContent = 'Salário total: R$ ' + totalS + ' | Total despesas: R$ ' + totalD + ' | Saldo: R$ ' + saldo
+            resumo.appendChild(li)  
+        }
 
-    resumo.appendChild(li)
+        else{
+            let li = document.createElement('li')
+            li.style.color="#3cd349ff"
+            li.textContent = 'Salário total: R$ ' + totalS + '  Total despesas: R$ ' + totalD + ' | Saldo: R$ ' + saldo
+
+            resumo.appendChild(li)  
+        }
+    
 }
 
 
     function limpar(){
-        var r = document.getElementById("resumo")
-        var d = document.getElementById("despesa")
-        r.remove()
-        d.remove()
+         var lista_despesas = JSON.parse(localStorage.getItem('listagem')) || []
+         var lista_salario = JSON.parse(localStorage.getItem('lista')) || []
 
+        localStorage.setItem('listagem', JSON.stringify([]))
+        localStorage.setItem('lista', JSON.stringify([]))
 
+        exibir_despesa()
+        exibir_resumo()
     }
 
 
