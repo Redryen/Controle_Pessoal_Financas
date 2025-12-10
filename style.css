@@ -11,7 +11,6 @@ input, button {
     color: #567ccf;
 }
 
-
 li {
     background: #567ccf;
     color: white;
@@ -22,10 +21,4 @@ li {
     box-shadow: none !important;
 }
 
-#resumoBox {
-    margin-top: 20px;
-    padding: 12px;
-    background: #dbeafe;
-    border: 2px solid #567ccf;
-    border-radius: 6px;
-}
+
